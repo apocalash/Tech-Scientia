@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <head>
+        <title>Sign UP | Core Essentials</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>  
+            function validateform(){  
+            var name=getElementById("name").value();  
+            var password=getElementById("password").value();
+              
+            if (name==null || name==""){  
+              alert("Name can't be blank");  
+              return false;  
+            }else if(password.length<6){  
+              alert("Password must be at least 6 characters long.");  
+              return false;  
+              }  
+            }  
+            </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="image/logos1.jpg" alt="logo" style="width:25px ;height: 25px ";></a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="index.html">Core Essentials</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <div class="container signup">
+            <div class="row">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4 form">
+                    <h1> Sign up </h1>
+                    <form method="post" onsubmit="return validateform()">
+                        <div class="form-group">
+                                <input class="form-control" placeholder="Name" type="text" id="name" required="true">
+            
+                                <br>
+
+                                <input class="form-control" placeholder="Email" type="text" id="email">
+            
+                                <br>
+
+                                <input class="form-control" placeholder="Password" type="password" id="password">
+            
+                                <br>
+            
+                                <input class="form-control" placeholder="Contact" type="text" name="phone" required="true">
+            
+                                <br>
+
+                                <input class="form-control" placeholder="City" type="text" name="city" required="true">
+
+                                <br>
+                                <input class="form-control" placeholder="Address" type="text" name="address" required="true">
+
+                                <br>
+            
+                    <button class="btn btn-primary" type="submit" onclick="alert('You have Successfully signed up. Continue Shopping')">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <footer>
+                <div class="container">
+                    <center>
+                     <p>Copyright © Core Essentials . All Rights
+                    Reserved | Contact Us: +91 90000 00000 </p>
+                    </center>	
+                </div>    
+        </footer>
+    </body>
+</html>
